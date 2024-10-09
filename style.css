@@ -1,0 +1,118 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  background-color: #f5f7fa;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  margin: 0;
+  padding: 40px 20px;
+}
+
+/* Heading */
+h1 {
+  font-size: 2.5rem;
+  color: #1f77b4;
+  margin-bottom: 20px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+/* Circular Button Styles */
+fieldset {
+  border: none;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+legend {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+#first_row_of_button {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+input[type="button"] {
+  background-color: #1f77b4;
+  color: #fff;
+  border: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%; /* Circular buttons */
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+input[type="button"]:hover {
+  background-color: #146a9e;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+input[type="button"]:active {
+  background-color: #0e4e75;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Tableau Viz Container */
+.content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+tableau-viz {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  width: 90vw;
+  height: 90vh;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  input[type="button"] {
+    font-size: 0.9rem;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  #first_row_of_button {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  input[type="button"] {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+  }
+}
