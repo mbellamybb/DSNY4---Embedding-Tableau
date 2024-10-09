@@ -44,6 +44,9 @@ function logWorkbookInformation() {
   salesBySegment = listSheets.find((ws) => ws.name == "SalesbySegment");
 }
 
+// Run our function when the workbook becomes interactive
+viz.addEventListener("firstinteractive", logWorkbookInformation);
+
 //Constants for buttons
 const oregonWashingtonButton = document.getElementById("oregon_and_washington");
 const clearFilterButton = document.getElementById("clear_filter");
@@ -81,6 +84,3 @@ function unDo() {
 oregonWashingtonButton.addEventListener("click", oregonWashFunction);
 clearFilterButton.addEventListener("click", clearStateFilter);
 undoButton.addEventListener("click", unDo);
-
-// Run our function when the workbook becomes interactive
-viz.addEventListener("firstinteractive", logWorkbookInformation);

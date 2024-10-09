@@ -5,38 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DSNY EMBEDDING 📊</title>
 
-    
     <script
       type="module"
       src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"
     ></script>
-    <script src="app.js"></script>
-    <link rel="stylesheet" href="style.css" 
-    />
 
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
     <h1>Embedding in Tableau</h1>
 
-<fieldset id="first_row_of_button">
-  <legend> Filter the view</legend>
-  <input type=""button" value="Oregon and Washington Only" id="oregon_and_washington"/>
-  <input type=""button" value="Clear Filter" id="clear_filter"/>
-  <input type=""button" value="Undo" id="undo" />
-</fieldset>
+    <fieldset id="first_row_of_button">
+      <legend>Filter the view</legend>
+      <input
+        type="button"
+        value="Oregon & Washington Only"
+        id="oregon_and_washington"
+      />
+      <input type="button" value="Clear Filter" id="clear_filter" />
+      <input type="button" value="Undo" id="undo" />
+    </fieldset>
 
-    <div class=""content">
-    <tableau-viz 
-    id="tableauViz"       
-  src='https://public.tableau.com/views/Superstore_embedded_800x800/Overview'      
-  toolbar="bottom" hide-tabs
-  width="100vw"
-  height="100vh"
-  >
-</tableau-viz>
-</div>
-
-
+    <div class="content">
+      <tableau-viz
+        id="tableauViz"
+        src="https://public.tableau.com/views/Superstore_embedded_800x800/Overview"
+        toolbar="bottom"
+        hide-tabs
+        width="100vw"
+        height="100vh"
+      >
+      </tableau-viz>
+    </div>
   </body>
 </html>
